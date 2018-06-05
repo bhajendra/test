@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".firebaseDemo.ArtistMainActivity">
+
+    <RelativeLayout
+        android:id="@+id/push_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_push_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="txt_push_message"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorPrimary"
+            android:textSize="26dp" />
+
+        <TextView
+            android:id="@+id/txt_reg_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="reg_id"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/editArtistName"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/push_notification"
+        android:layout_height="wrap_content"
+        android:hint="Enter name" />
+    <RelativeLayout
+        android:id="@+id/relative_profile_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editArtistName">
+
+        <ImageView
+            android:id="@+id/image_view_user"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:hint="Enter name" />
+        <Button
+            android:id="@+id/btn_select_image"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/image_view_user"
+            android:layout_height="wrap_content"
+            android:hint="Image" />
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/spinnerGenres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_profile_image"
+        android:entries="@array/genres"/>
+    <Button
+        android:id="@+id/buttonAddArtist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerGenres"
+        android:text="Add" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Artists"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_below="@+id/buttonAddArtist"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:text="Tap on an Artist to add and view tracks"
+        android:textAlignment="center" />
+
+   <!-- <ListView
+        android:id="@+id/listViewArtists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"/>-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_artist"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/textView1"
+        android:layout_width="match_parent"
+        android:background="#ECEFF1"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="bpund.isurakaha.com.test.sqlit.login.registration.LoginAcitivy">
+
+    <EditText
+        android:id="@+id/login_user_name"
+        android:layout_width="match_parent"
+        android:layout_marginTop="205dp"
+        android:hint="Enter UseName"
+        android:gravity="center"
+        android:textColor="#000"
+        android:padding="@dimen/padd_10"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/login_user_password"
+        android:layout_width="match_parent"
+        android:hint="Enter Password"
+        android:textColor="#000"
+        android:gravity="center"
+        android:padding="@dimen/padd_10"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:hint="Login"
+        android:gravity="center"
+        android:onClick="login"
+        android:padding="@dimen/padd_10"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/user_not_register"
+        android:layout_width="match_parent"
+        android:hint="user not registered yet \n click to register ?"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

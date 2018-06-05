@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="bpund.isurakaha.com.test.sqlit.login.registration.LoginAcitivy">
+
+    <EditText
+        android:id="@+id/edit_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="205dp"
+        android:gravity="center"
+        android:hint="Enter UseName"
+        android:padding="@dimen/padd_10"
+        android:textColor="#000" />
+
+    <EditText
+        android:id="@+id/edit_user_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Enter Password"
+        android:padding="@dimen/padd_10"
+        android:textColor="#000" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/edit_user_set_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Enter Password"
+            android:padding="@dimen/padd_10"
+            android:textColor="#000" />
+
+        <Button
+            android:id="@+id/edit_user_select_date_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:gravity="center"
+            android:hint="select date"
+            android:padding="@dimen/padd_10"
+            android:textColor="#000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/edit_btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="update"
+            android:padding="@dimen/padd_10" />
+
+        <Button
+            android:id="@+id/edit_btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="delete"
+            android:padding="@dimen/padd_10" />
+    </LinearLayout>
+</LinearLayout>

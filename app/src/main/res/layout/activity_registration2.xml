@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="bpund.isurakaha.com.test.sqlit.login.registration.RegistrationActivity">
+
+    <EditText
+        android:id="@+id/register_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="205dp"
+        android:gravity="center"
+        android:hint="Enter UseName"
+        android:padding="@dimen/padd_10"
+        android:textColor="#000" />
+
+    <EditText
+        android:id="@+id/register_user_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Enter Password"
+        android:padding="@dimen/padd_10"
+        android:textColor="#000" />
+
+    <EditText
+        android:id="@+id/register_user_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Enter Confirm Password"
+        android:padding="@dimen/padd_10"
+        android:textColor="#000" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Register"
+        android:padding="@dimen/padd_10" />
+
+</LinearLayout>

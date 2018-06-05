@@ -1,0 +1,7 @@
+<resources>
+    <string name="welcome">स्वागत आहे</string>
+    <string name="email">ईमेल</string>
+    <string name="password">पासवर्ड</string>
+    <string name="login">लॉगइन</string>
+    <string name="signup">साइनअप</string>
+</resources>

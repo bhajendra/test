@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="registration">http://192.168.0.4:8070/isuraksha/register/registerUser</string>
+    <string name="login123">http://192.168.0.4:8070/isuraksha/api/login</string>
+</resources>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 1000 It names the Java package for the application. The package name serves as a unique identifier for the application. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bpund.isurakaha.com.test">
+
+    <!-- 4000 It declares which permissions the application must have in order to access protected parts of the API and interact with other applications. -->
+    <!-- Permission - Internet Connect -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".recycleviewswipedeleteexample.MyApplication"
+        android:allowBackup="true"
+        android:configChanges="locale"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- .firebaseDemo.ArtistMainActivity -->
+        <!-- 2000 It determines which processes will host application components. -->
+        <!-- <activity android:name=".login.registratin.model.login.LoginActivity18"> using sqlite database -->
+        <!-- activity android:name=".json.parsing.JsonParsingMainAcitivy" -->
+        <!-- ***************** Launcer activity -->
+        <activity android:name=".testing.TestingActivity">
+
+            <!--   <activity android:name=".android.facebook.integration.examp.FaceBookActivity">
+            <meta-data
+                android:name="com.facebook.sdk.ApplicationId"
+                android:value="@string/app_id" />-->
+            <!--
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+            -->
+
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!--
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <data android:scheme="x-oauthflow-twitter" android:host="callback"/>
+                </intent-filter>
+            -->
+        </activity>
+        <!-- 3000 It describes the components of the application — the activities, services, broadcast receivers, and content providers that the application is composed of. It names the classes that implement each of the components and publishes their capabilities (for example, which Intent messages they can handle). These declarations let the Android system know what the components are and under what conditions they can be launched. -->
+        <!-- <activity android:name=".search.filter.SearchFilterMainActivity" /> -->
+        <!-- <activity android:name=".search.filter.SearchFilterMainActivity"></activity> -->
+        <!-- <activity android:name=".firebaseDemo.ArtistMainActivity" /> -->
+        <!-- <activity android:name=".firebaseDemo.TrackActivity" /> -->
+        <!-- <activity android:name=".login.registratin.model.registration.RegistrationActivity18"></activity> -->
+        <activity android:name=".firebaseDemo.EditActivity" />
+        <activity android:name=".sortingarraylist.SortingArraylist" />
+
+        <service android:name=".services.StartStopService" />
+
+        <receiver android:name=".broadcast.MySchedule" />
+        <!-- <activity android:name=".broadcast.BroadCastMain" /> -->
+        <activity android:name=".broadcast.SecondActivity" />
+        <!-- <activity android:name=".asyntask.AsynMainActivity"></activity> -->
+        <!-- <activity android:name=".testing.TestingActivity"></activity> -->
+        <!-- <activity android:name=".retrofit.RetrofitDemoMainActivity"></activity> -->
+        <!-- <activity android:name=".multilanguage.MulitLanguageActivity"></activity> -->
+        <!-- <activity android:name=".shareprefrences.SimpleSharePrefrence"></activity> -->
+        <!-- <activity android:name=".broadcast.exampleoflocalbroadcast.LocalBroadcastExampleActivity"></activity> -->
+        <service android:name=".broadcast.exampleoflocalbroadcast.MessageService" />
+
+        <!-- <activity android:name=".readdatafromlocal.ReadDataFromLocalStorage"></activity> -->
+        <!-- <activity android:name=".sqlit.login.registration.LoginAcitivy" /> -->
+        <activity android:name=".sqlit.login.registration.RegistrationActivity" />
+        <activity android:name=".sqlit.login.registration.UserDetailsActivity" />
+        <activity android:name=".sqlit.login.registration.EditUseDetails" />
+        <activity android:name=".login.registratin.model.activies.MainActivity18" />
+        <activity android:name=".login.registratin.model.registration.RegistrationActivity18" />
+        <!-- <activity android:name=".firebaseDemo.activity.FirebaseNoficationMainActivity"></activity> -->
+
+
+        <!-- Firebase Notifications -->
+        <service android:name=".firebaseDemo.push.notification.app.service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".firebaseDemo.push.notification.app.service.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- <activity android:name=".ActivityNavigation.ActivityOne" /> -->
+        <activity android:name=".ActivityLifeCycle.ActivityTwo" />
+        <!-- <activity android:name=".json.parsing.JsonParsingMainAcitivy"></activity> -->
+        <!-- <activity android:name=".broadcast.brodcastreceiverdemo2.ReadPhonCallBrodcastMain"></activity> -->
+        <receiver android:name=".broadcast.brodcastreceiverdemo2.IncomingCallBroadCast">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcast.dynanic.broadreceiver.cast.example.ConnnectionReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <!-- <category android:name="android.intent.category.LAUNCHER"></category> -->
+                <!-- <data android:mimeType="@string/action_sign_in"></data> -->
+            </intent-filter>
+        </receiver>
+
+        <!-- <service android:name=".viewpager.ViewPagerMainActivity" /> -->
+        <!-- <activity android:name=".threadS.ThreadExample01"></activity> -->
+        <!--
+        <activity android:name=".broadcast.local.boradcast.receiver1.BroadCastActivity" />
+        <activity android:name=".broadcast.local.boradcast.receiver1.BroadReceiverIntentService"></activity>
+        -->
+        <!-- <activity android:name=".broadcast.dynanic.broadreceiver.cast.example.DyanamicBroadCastActivity"></activity> -->
+        <!--
+        <activity android:name=".broadcast.checkChargerConnnectedBroadCast.ChargerConnectActivity" />
+        <activity android:name=".broadcast.checkChargerConnnectedBroadCast.ChargerConnnectedReceiver"></activity>
+        -->
+        <!-- <activity android:name=".create.json.CreateJSONActivity"></activity> -->
+        <!-- <activity android:name=".hander.HandlerMainActivity"></activity> -->
+        <activity android:name=".startActivityForResultExample.TwoActivity" />
+        <!--
+        <activity android:name=".viewpager.ViewPagerMainActivity" />
+        <activity android:name=".viewpager.MyPagerAdapter" />
+        <activity android:name=".viewpager.FragmentWithOneImage" />
+        <activity android:name=".viewpager.FragmentWithTwoImage"></activity>
+        -->
+        <activity android:name=".googleMap.CurrentPlaceDetailsOnMap" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <!--
+            <activity
+            android:name=".googleMap.MapsCurrentLocationActivity"
+            android:label="@string/title_activity_maps_current_location"></activity>
+        -->
+        <!-- <activity android:name=".notificationExample.NotificationActivity"></activity> -->
+        <!-- <activity android:name=".AutocomliteTextView.AutoCompleteTextIView"></activity> -->
+        <!-- <activity android:name=".asyntask.AsynTaskDemoSecond"></activity> -->
+        <!-- <activity android:name=".captureImage.CameraActivityExam"></activity> -->
+        <activity android:name=".captureImage.FullImageActivity" />
+        <!-- <activity android:name=".compassExamp.CompasSctivity"></activity> -->
+        <!-- <activity android:name=".sqlit.crudExamp1.android.database.sqlite.StudListMainActivity" /> -->
+        <activity android:name=".sqlit.crudExamp1.android.database.sqlite.EditDeleteActivity" />
+        <activity android:name=".sqlit.crudExamp1.android.database.sqlite.AddStudeActivity" />
+
+        <service
+            android:name=".sqlit.crudExamp1.android.database.sqlite.seviceTest.TestSevice"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- <activity android:name=".broadcast.local.broad.cast.receiver.SendBroadCast" /> -->
+        <activity android:name=".broadcast.local.broad.cast.receiver.ReceiveBroadCast" />
+        <!-- <activity android:name=".ThreadExamp.ThreadMainActivity"></activity> -->
+        <!--
+        <activity android:name=".android.facebook.integration.examp.FaceBookActivity">
+            <meta-data
+                android:name="com.facebook.sdk.ApplicationId"
+                android:value="@string/app_id" />
+        </activity>
+        -->
+        <activity android:name=".android.facebook.integration.examp.LauchActivityctivity"></activity>
+    </application>
+
+</manifest>

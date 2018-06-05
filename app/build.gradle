@@ -1,0 +1,140 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.3"
+    dataBinding.enabled = true
+    defaultConfig {
+        applicationId "bpund.isurakaha.com.test"
+        minSdkVersion 15
+        targetSdkVersion 26
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        useLibrary 'org.apache.http.legacy'
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+        release {
+            storeFile file("C:\\Users\\isuraksha3\\Desktop\\Android Apk Destination\\TextJksFileForReleaseApk\\myAndroidJks.jks")
+            storePassword "pund@123"
+            keyAlias "pund@123"
+            keyPassword "pund@123"
+        }
+    }
+    productFlavors {
+        phone {
+            applicationId "bpund.isurakaha.com.test"
+            versionCode 1
+            versionName "1.0"
+        }
+
+        tablet {
+            applicationId "bpund.isurakaha.com.test"
+            versionCode 1
+            versionName "1.0"
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile files('src/main/java/libs/twitter4j-core-4.0.4.jar')
+    /* compile 'com.google.firebase:firebase-storage:9.2.1'
+    compile 'com.google.firebase:firebase-auth:9.2.1'*/
+    /*compile 'com.google.firebase:firebase-database:10.0.1'*/
+
+    // facebook
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:cardview-v7:23.0.1'
+    compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.google.firebase:firebase-storage:11.0.2'
+    compile 'com.google.firebase:firebase-database:11.0.2'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.google.firebase:firebase-messaging:11.0.2'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.google.android.gms:play-services-maps:11.0.2'
+    compile 'com.facebook.android:facebook-android-sdk:4.0.0'
+    testCompile 'junit:junit:4.12'
+}
+apply plugin: 'com.google.gms.google-services'
+
+/*
+
+These properties are more relevant to Android than the Gradle build system, to they will only be lightly reviewed here. In short:
+
+        The compileSdkVersion is associated with the Android SDK and should always be the latest available version.
+
+The defaultConfig section hold properties that are shared by all variants (combinations of build types and product flavors) of the
+ app.
+
+The applicationId is based on the domain name and project name specified when creating the app, and must be unique in the Google
+ Play store.
+
+        The value of minSdkVersion is the minimum Android API you are willing to support with this app, and the targetSdkVersion
+        should be the latest Android version available.
+
+The value of versionCode should be an integer that is incremented before uploading a new version of the app into the Google Play
+ store. This value, along with the applicationId, tell Google that this is a new version of an existing app, as opposed to a new
+  app.
+
+The versionName value is used for your own internal version tracking.
+
+The testInstrumentationRunner property is configured to use the JUnit 4 test runner configured for Android apps.
+
+Below this section is a block called buildTypes. By default, Android apps support two build types, debug and release. This section
+allows you to configure each however you like. The debug section is not shown here, implying that all the default settings for
+debug are being used.
+
+        After the android block, there is a block that shows the libraries used for this app.
+
+        dependencies {
+            implementation fileTree(dir: 'libs', include: ['*.jar'])
+            implementation 'com.android.support:appcompat-v7:26.1.0'
+            implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+            testImplementation 'junit:junit:4.12'
+            androidTestImplementation 'com.android.support.test:runner:1.0.1'
+            androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+        }
+Configuring dependencies is a fundamental part of building Gradle applications. In this case, the dependencies section shows
+ values for the implementation, testImplementation, and androidTestImplementation configurations.
+
+        Taking the simplest one first, the testImplementation dependency consists only of the latest stable JUnit 4 distribution
+        . The JUnit classes and test annotations will then be available at compile time in the src/test/java hierarchy.
+
+The androidTestImplementation dependency refers to the Espresso testing library, which is used for integration testing of
+Android apps. In this case, Espresso is requested without the support-annotations library that it would normally include,
+because a different version is already included through other dependencies. In a later step, you’ll see how to find out
+what version of this library was included and why.
+
+Finally, there are three lines that add dependencies to the implementation configuration:
+
+The first, fileTree(dir: 'libs', include: ['*.jar']), is a fileTree dependency that adds any jar files in the libs folder
+to the compile classpath
+
+The second, com.android.support:appcompat-v7:26.1.0 adds the Android Compatibility library to the project. This allows you to
+use the Material design theme and other capabilities in any Android app as old as SDK version 7.
+
+        The third, com.android.support.constraint:constraint-layout:1.0.2 adds the Android Constraint Layout to the project.
+         This allows you to use the ConstraintLayout layout class in any Android app as old as SDK version 9.
+
+        Run standard Gradle tasks
+*/
