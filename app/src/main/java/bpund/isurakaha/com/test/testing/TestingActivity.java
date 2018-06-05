@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.Set;
 
 import bpund.isurakaha.com.test.R;
-
+/*https://mobikul.com/android-studio-github-integration/*/
 public class TestingActivity extends AppCompatActivity implements ClickInterface {
 
 
@@ -1869,6 +1869,7 @@ class Pattern {
             }
         }
     }
+    /*olly for push*/
 }
 
 
